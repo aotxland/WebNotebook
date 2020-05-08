@@ -1,0 +1,105 @@
+<footer class="footer">
+  <div class="footer__inner">
+    {{ if $.Site.Copyright }}
+      <div class="copyright copyright--user">
+        <span>{{ $.Site.Copyright | safeHTML }}</span>
+    {{else}}
+      <div class="copyright">
+        <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
+    {{end}}
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<a id="back-to-top" style="display: inline-block;" href="javascript:void(0);" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+  <span class="iconfont icon-top"></span>
+</a>
+
+<script src="{{ "assets/main.js" | absURL }}?{{ resources.Get "assets/main.js" | md5}}"></script>
+{{/*  <script src="{{ "assets/prism.js" | absURL }}"></script>  */}}
+
+<script>
+  const addCopyButtons = function(clipboard) {
+    document.querySelectorAll('pre > code').forEach(function (codeBlock) {
+        const button = document.createElement('button');
+        button.className = 'copy-code-button';
+        button.type = 'button';
+        button.innerText = 'Copy';
+
+        const btnWrapper = document.createElement('div');
+        btnWrapper.className = 'copy-code-button-wrap';
+        btnWrapper.appendChild(button);
+  
+        button.addEventListener('click', function () {
+            clipboard.writeText(codeBlock.innerText).then(function () {
+                /* Chrome doesn't seem to blur automatically,
+                   leaving the button in a focused state. */
+                button.blur();
+  
+                button.innerText = 'Done!';
+  
+                setTimeout(function () {
+                    button.innerText = 'Copy';
+                }, 2000);
+            }, function (error) {
+                button.innerText = 'Error';
+            });
+        });
+  
+        const pre = codeBlock.parentNode;
+        pre.insertAdjacentElement('beforebegin', btnWrapper);
+    });
+  };
+
+  window.addEventListener('load', function(event) {
+
+    // external link open in new tab
+    const links = document.links;
+    for (let i = 0, linksLength = links.length; i < linksLength; i++) {
+      if (links[i].hostname != window.location.hostname && 
+      !links[i].href.startsWith('javascript:') && 
+      !links[i].href.startsWith('mailto:')) {
+          links[i].target = '_blank';
+      } 
+    }
+
+    // show toc
+    if (document.querySelectorAll('#TableOfContents li').length > 0) {
+      document.querySelector('#post-toc').style.display = 'block';
+    }
+    
+    // toc active
+    document.querySelectorAll('#post-toc a').forEach(anchor => {
+      anchor.addEventListener('click', evt => {
+        // remove all .active
+        document.querySelectorAll('#post-toc a').forEach(ele => {
+          ele.classList.remove('active');
+        });
+        evt.target.classList.add('active');
+      })
+    });
+
+    // anchor smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+    
+          // querySelector has limitation due to CSS selector standard
+          // like id="1-安装", querySelector('#1-安装') will failed with err
+          // SyntaxError: Document.querySelector: '#1-安装' is not a valid selector
+          document.getElementById(this.getAttribute('href').substring(1)).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+    });
+    
+    // copy code button
+    if (navigator && navigator.clipboard) {
+      addCopyButtons(navigator.clipboard);
+    }
+  });
+</script>
+
+<!-- Extended footer section-->
+{{ partial "extended_footer.html" . }}

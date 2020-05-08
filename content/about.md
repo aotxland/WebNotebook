@@ -14,9 +14,8 @@ This theme is pretty basic and covers all of the essentials. All you have to do 
 
 The theme includes:
 
-- **5 duotone themes**, depending on your preferences (orange, red, blue, green, pink)
-- [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
-- **really nice, custom duotone** syntax highlighting based on [**PrismJS**](https://prismjs.com)
-- mobile friendly layout
+- **light/dark mode**, depending on your preferences
+- great reading experience thanks to [**Inter UI font**](https://rsms.me/inter/), made by [Rasmus Andersson](https://rsms.me/about/)
+- nice code highlighting thanks to [**PrismJS**](https://prismjs.com)
 
 So, there you have it... enjoy!

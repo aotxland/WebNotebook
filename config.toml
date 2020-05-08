@@ -1,32 +1,41 @@
-baseurl = "http://wiki.aotxland.com/"
+baseurl = "http://wiki.aotxland.com"
 languageCode = "en-us"
-theme = "hugo-theme-terminal"
-paginate = 5
+theme = "hello-friend"
+paginate = 4
 
 [params]
+  # dir name of your blog content (default is `content/posts`)
   contentTypeName = "post"
-  themeColor = "blue"
+  # "light" or "dark"
+  defaultTheme = "dark"
+  # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
-  fullWidthTheme = false
-  centerTheme = true
-  authorName = "Yif"
-  # for RSS feed filter https://gohugo.io/functions/where/#mainsections
-  mainSections = ["post", "note", "docs"]
-  pageBundle = true
+  # Enable to show reading time in minutes for posts
+  showReadingTime = true
 
 [languages]
   [languages.en]
-    title = "aotxland/WebNote"
-    subtitle = "A Hugo Web Notebook"
+    title = "aotxland/wiki"
+    subtitle = "A wiki"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
+    writtenBy = "Written by"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
-      logoText = "aotxland/WebNote"
+      logoText = "aotxland/wiki"
       logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
@@ -37,11 +46,3 @@ paginate = 5
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
-
-[outputFormats]
-[outputFormats.RSS]
-mediatype = "application/rss"
-baseName = "atom"
-
-[markup.highlight]
-  noClasses = false

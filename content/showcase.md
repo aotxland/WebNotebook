@@ -1,7 +1,7 @@
 ---
 title: "Showcase"
-date: "2019-01-18"
-author: "Lorem Ipsum"
+date: "2018-07-18"
+author: "Hello Robot"
 ---
 
 ## Header 2

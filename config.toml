@@ -1,7 +1,7 @@
 baseurl = "http://wiki.aotxland.com"
 title = "aotxland/WebNote"
 Paginate = 20
-theme= "we"
+theme= "hugo-theme-we"
 hasCJKLanguage = true
 [[menu.main]]
     name = "关于我"

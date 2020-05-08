@@ -1,6 +1,6 @@
 baseurl = "http://wiki.aotxland.com/"
 languageCode = "en-us"
-theme = "terminal"
+theme = "hugo-theme-terminal"
 paginate = 5
 
 [params]
@@ -8,12 +8,16 @@ paginate = 5
   themeColor = "blue"
   showMenuItems = 2
   fullWidthTheme = false
-  centerTheme = false
+  centerTheme = true
+  authorName = "Yif"
+  # for RSS feed filter https://gohugo.io/functions/where/#mainsections
+  mainSections = ["post", "note", "docs"]
+  pageBundle = true
 
 [languages]
   [languages.en]
-    title = "aotxland/WebNotebook"
-    subtitle = "A Web Notebook"
+    title = "aotxland/WebNote"
+    subtitle = "A Hugo Web Notebook"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
@@ -21,7 +25,7 @@ paginate = 5
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "aotxland/WebNotebook"
+      logoText = "aotxland/WebNote"
       logoHomeLink = "/"
 
     [languages.en.menu]
@@ -33,3 +37,11 @@ paginate = 5
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "atom"
+
+[markup.highlight]
+  noClasses = false

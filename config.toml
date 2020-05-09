@@ -58,6 +58,6 @@ paginate = 5
         name = "About"
         url = "/about"
       [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
+        identifier = "主站"
+        name = "主站"
+        url = "https://aotxland.com"

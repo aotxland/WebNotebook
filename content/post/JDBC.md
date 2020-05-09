@@ -4,6 +4,7 @@ date = "2020-05-08"
 author = "Yif"
 description = " "
 cover = "img/jdbc.jpg"
+toc = true
 +++
 
 ## 第1章：JDBC概述

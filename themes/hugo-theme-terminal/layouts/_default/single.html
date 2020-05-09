@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div class="post">
+  <h1 class="post-title">
+    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+  <div class="post-meta">
+      {{ if .Params.date }}
+    <span class="post-date">
+      {{ .Date.Format "2006-01-02" }}
+    </span>
+    {{ end }}
+
+    {{ if .Params.author }}
+    <span class="post-author">::
+      {{ .Params.author }}
+    </span>
+    {{ else }}
+    <span class="post-author">::
+      {{ .Site.Params.authorName }}
+    </span>
+    {{ end }}
+
+    {{ if .GitInfo }}
+    :: Mod {{ .Lastmod.Format "2006-01-02" }}({{ .GitInfo.AbbreviatedHash }})
+    {{ end }}
+
+  </div>
+
+  {{ if .Params.tags }}
+  <span class="post-tags">
+    {{ range .Params.tags }}
+    #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>&nbsp;
+    {{ end }}
+  </span>
+  {{ end }}
+
+  {{ if .Params.cover }}
+    {{ if .Site.Params.pageBundle }}
+      <img src="{{ printf "%s/%s" .File.Dir .Params.cover | absURL }}" class="post-cover" />
+    {{ else }}
+      <img src="{{ .Params.cover | absURL }}" class="post-cover" />
+    {{ end }}
+  {{ end }}
+
+  <!-- TOC -->
+  {{- partial "post/toc.html" . -}}
+
+  <!-- Outdated Info Warning -->
+  {{- partial "post/outdated-info-warning.html" . -}}
+
+  <!-- Content -->
+  <div class="post-content">
+    {{- with .Content -}}
+      <div>
+        {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
+      </div>
+    {{- end -}}
+  </div>
+
+  {{ if eq .Type $.Site.Params.contentTypeName }}
+  {{ partial "posts_pagination.html" . }}
+  {{ end }}
+
+  {{ partial "comments.html" . }}
+</div>
+{{ end }}

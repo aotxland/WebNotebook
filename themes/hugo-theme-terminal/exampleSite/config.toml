@@ -1,14 +1,15 @@
-baseurl = "/"
+baseurl = "https://example.com/"
 languageCode = "en-us"
 theme = "hugo-theme-terminal"
 paginate = 5
 
 [params]
   contentTypeName = "post"
-  themeColor = "blue"
+  themeColor = "orange"
   showMenuItems = 2
   fullWidthTheme = false
-  centerTheme = ture
+  centerTheme = false
+  authorName = "荒野无灯"
   # for RSS feed filter https://gohugo.io/functions/where/#mainsections
   mainSections = ["post", "note", "docs"]
   pageBundle = true
@@ -42,6 +43,8 @@ paginate = 5
 mediatype = "application/rss"
 baseName = "atom"
 
+[author]
+    name = "荒野无灯"
 
 [markup.highlight]
   noClasses = false

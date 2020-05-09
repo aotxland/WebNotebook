@@ -3,30 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://wiki.aotxland.com/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wiki.aotxland.com/</loc>
+    <loc>/post/hello/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wiki.aotxland.com/showcase/</loc>
-    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wiki.aotxland.com/archive/</loc>
+    <loc>/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wiki.aotxland.com/categories/</loc>
+    <loc>/showcase/</loc>
+    <lastmod>2018-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://wiki.aotxland.com/tags/</loc>
+    <loc>/archive/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>

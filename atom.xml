@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on aotxland/WebNote</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on aotxland/WebNote</description>
+    <title>aotxland/WebNote</title>
+    <link>/</link>
+    <description>Recent content on aotxland/WebNote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Yif</copyright>
-    <lastBuildDate>Fri, 08 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/atom.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -39,6 +39,17 @@ MySQL服务的登录和退出 方式一：通过mysql自带的客户端 只限�
 方式二：通过windows自带的客户端 登录： mysql 【-h主机名 -P端口号 】-u用户名 -p密码
 退出： exit或ctrl+C
 MySQL的常见命令  查看当前所有的数据库 show databases; 打开指定的库 use 库名 查看当前库的所有表 show tables; 查看其它库的所有表 show tables from 库名; 创建表  create table 表名( 列名 列类型, 列名 列类型， ); 查看表结构 desc 表名; 查看服务器的版本 方式一：登录到mysql服务端 select version(); 方式二：没有登录到mysql服务端 mysql --version或mysql --V  MySQL的语法规范  不区分大小写,但建议关键字大写，表名、列名小写 每条命令最好用分号结尾 每条命令根据需要，可以进行缩进 或换行 注释 单行注释：#注释文字 单行注释：&amp;ndash; 注释文字 多行注释：/* 注释文字 */  SQL的语言分类  DQL（Data Query Language）：数据查询语言 select DML(Data Manipulate Language):数据操作语言 insert 、update、delete DDL（Data Define Languge）：数据定义语言 create、drop、alter TCL（Transaction Control Language）：事务控制语言 commit、rollback  数据定义 库的管理  创建库 create database (if not exists) 库名 删除库 drop database (if exists) 库名 修改库 一般不改，有可能改字符集 alter database 库名 character set 字符集  表的管理 创建表 CREATE TABLE IF NOT EXISTS 表名( 列名 列的类型 (长度) (约束), stuId INT, stuName VARCHAR(20), gender CHAR, bornDate DATETIME ); DESC 表名; #用来展示表格 修改表 语法： ALTER TABLE 表名 ADD|MODIFY|DROP|CHANGE COLUMN 字段名 【字段类型】;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hi there My name is Radek and I&amp;rsquo;m the author of this theme. I made it to help you present your ideas easier.
+We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
+This theme is pretty basic and covers all of the essentials. All you have to do is start typing!</description>
     </item>
     
     <item>

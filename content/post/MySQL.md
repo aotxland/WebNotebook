@@ -2,6 +2,8 @@
 title = "MySQL基础"
 date = "2020-05-08"
 author = "Yif"
+description = " "
+cover = "img/mysql.jpg"
 +++
 
 ## 数据库的相关概念

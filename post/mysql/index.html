@@ -151,7 +151,85 @@ MySQL的常见命令  查看当前所有的数据库 show databases; 打开指�
   <img src="/img/mysql.jpg" class="post-cover" />
   
 
-   <div class="post-content"><div>
+   <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#数据库的相关概念">数据库的相关概念</a>
+      <ul>
+        <li><a href="#数据库存储数据的特点">数据库存储数据的特点</a></li>
+      </ul>
+    </li>
+    <li><a href="#mysql产品的介绍和安装">MySQL产品的介绍和安装</a>
+      <ul>
+        <li><a href="#mysql服务的启动和停止">MySQL服务的启动和停止</a></li>
+        <li><a href="#mysql服务的登录和退出">MySQL服务的登录和退出</a></li>
+        <li><a href="#mysql的常见命令">MySQL的常见命令</a></li>
+        <li><a href="#mysql的语法规范">MySQL的语法规范</a></li>
+        <li><a href="#sql的语言分类">SQL的语言分类</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据定义">数据定义</a>
+      <ul>
+        <li><a href="#库的管理">库的管理</a></li>
+        <li><a href="#表的管理">表的管理</a></li>
+        <li><a href="#常见数据类型">常见数据类型</a></li>
+        <li><a href="#约束">约束</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据查询">数据查询</a>
+      <ul>
+        <li><a href="#基础查询和条件查询">基础查询和条件查询</a></li>
+        <li><a href="#排序查询order-by">排序查询(order by)</a></li>
+        <li><a href="#使用常见函数查询">使用常见函数查询</a></li>
+        <li><a href="#分组查询group-by">分组查询(group by)</a></li>
+        <li><a href="#连接查询join">连接查询(join)</a></li>
+        <li><a href="#子查询">子查询</a></li>
+        <li><a href="#分页查询">分页查询</a></li>
+        <li><a href="#联合查询union">联合查询(union)</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据操作">数据操作</a>
+      <ul>
+        <li><a href="#插入insert">插入(insert)</a></li>
+        <li><a href="#修改update">修改(update)</a></li>
+        <li><a href="#删除delete">删除(delete)</a></li>
+      </ul>
+    </li>
+    <li><a href="#事务">事务</a>
+      <ul>
+        <li><a href="#特点acid">特点（ACID）</a></li>
+        <li><a href="#事务的分类">事务的分类</a></li>
+        <li><a href="#使用步骤">使用步骤</a></li>
+        <li><a href="#事务并发">事务并发</a></li>
+      </ul>
+    </li>
+    <li><a href="#视图">视图</a>
+      <ul>
+        <li><a href="#视图的特点">视图的特点</a></li>
+        <li><a href="#视图的创建修改查看">视图的创建修改查看</a></li>
+        <li><a href="#视图的更新">视图的更新</a></li>
+      </ul>
+    </li>
+    <li><a href="#变量函数和存储过程">变量、函数和存储过程</a>
+      <ul>
+        <li><a href="#变量">变量</a></li>
+        <li><a href="#存储过程">存储过程</a></li>
+        <li><a href="#函数">函数</a></li>
+        <li><a href="#函数和存储过程的区别">函数和存储过程的区别</a></li>
+      </ul>
+    </li>
+    <li><a href="#流程控制结构">流程控制结构</a>
+      <ul>
+        <li><a href="#分支">分支</a></li>
+        <li><a href="#循环">循环</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content"><div>
         <h2 id="数据库的相关概念">数据库的相关概念<a href="#数据库的相关概念" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ol>
 <li>DB：数据库，保存一组有组织的数据的容器</li>

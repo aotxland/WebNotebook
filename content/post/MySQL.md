@@ -4,6 +4,7 @@ date = "2020-05-08"
 author = "Yif"
 description = " "
 cover = "img/mysql.jpg"
+toc = true
 +++
 
 ## 数据库的相关概念
